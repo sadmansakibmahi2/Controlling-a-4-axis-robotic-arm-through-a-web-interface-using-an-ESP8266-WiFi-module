@@ -69,6 +69,33 @@ Finally, the code prints the received value and the position of the servo motor 
 In summary, this code is for controlling a robotic arm through a web interface using an ESP8266 WiFi module and servo motors. It creates an HTTP server, connects to a Wi-Fi network, and sets the position of the servo motors based on the received data from the client.
 
 
+## Circuit Explanation:- 
+
+Servo to the NodeMCU 1.0 (ESP-12E Module), you will need to connect the servo signal wires to digital pins of the microcontroller. In this project, the servos are attached to the following digital pins of the NodeMCU:
+
+    Servo 0: D1 (GPIO 5)
+    Servo 1: D2 (GPIO 4)
+    Servo 2: D0 (GPIO 16)
+    Servo 3: D3 (GPIO 0)
+
+You will also need to provide power to the servo, which is typically done using a separate power source. The servo motor should be powered with a 5V power supply and you should connect the ground of the servo to the ground of the NodeMCU board.
+
+Note that you may need to use a separate power supply for the servo motors depending on the current draw of the servo and the capabilities of your microcontroller. It's important to avoid drawing too much current from the microcontroller's pins, as this can damage the microcontroller or the servo.
+
+Additionally, for the NodeMCU 1.0 (ESP-12E Module) to connect to the Wi-Fi network, you will need to provide it with a Wi-Fi antenna. This can be done by either connecting an external antenna to the board's U.FL connector, or by using a development board that includes an onboard antenna.  servo power supply module to supply power from extarnally. this module contain lm7805 to convert 12 v to 5v
+
+#### Just to summarize:
+
+Servo to the NodeMCU 1.0 (ESP-12E Module), you will need to do the following:
+
+1) Connect the servo signal wires to digital pins of the NodeMCU board (D1 for Servo 0, D2 for Servo 1, D0 for Servo 2, and D3 for Servo 3).
+2) Provide power to the servo using a separate power source. The servo should be powered with a 5V power supply.
+3) Connect the ground of the servo to the ground of the NodeMCU board.
+4) Use a servo power supply module (such as one with an LM7805) to convert an external 12V power supply to 5V to power the servo.
+
+In addition, to connect the NodeMCU 1.0 (ESP-12E Module) to a Wi-Fi network, you will need to provide it with a Wi-Fi antenna. This can be done by either connecting an external antenna to the board's U.FL connector, or by using a development board that includes an onboard antenna.
+
+
 ## Author
 
 - [@sadmansakibmahi2](https://github.com/sadmansakibmahi2)
